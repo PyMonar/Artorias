@@ -1,0 +1,16 @@
+version: 2.0
+# lavie.zhdocs.io/en/latest/user_guides/choose_base_image.html#node-js
+base_image: nodejs/v10.6.0_jessie
+
+build:
+  - npm install
+  - npm run build
+
+test:
+  unittest:
+    - echo no
+
+artifacts:
+  targets:
+    - tarball
+    - docker

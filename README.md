@@ -14,8 +14,10 @@ $ npm run dev
 # 生产环境部署
 $ npm run build
 $ npm run start
+
+# lint 代码
+$ npm run lint
 ```
 
 ## License
 MIT &copy; pymonar
-

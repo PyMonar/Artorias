@@ -1,15 +1,9 @@
 <template>
-  <div>
-    Artorias
-  </div>
+  <h1>页面神秘失踪了！</h1>
 </template>
 
 <style lang="postcss" scoped>
-div {
+h1 {
   font-size: 0.13rem;
 }
 </style>
-
-<script>
-export default {}
-</script>

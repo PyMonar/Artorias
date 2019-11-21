@@ -1,17 +1,26 @@
+// 读取 .env 配置文件
+require('dotenv').config()
+
 module.exports = {
   mode: 'universal',
+
+  // router
+  router: {
+    // 在每页渲染前运行 middleware/user-agent.js 中间件的逻辑
+    middleware: 'user-agent'
+  },
+
   /*
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'CHAO 各庄',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
-        hid: 'description',
-        name: 'description',
-        content: process.env.npm_package_description || ''
+        name: 'viewport',
+        content:
+          'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover'
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
@@ -19,15 +28,45 @@ module.exports = {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#fff' },
+  loading: false,
   /*
    ** Global CSS
    */
-  css: [],
+  css: [
+    {
+      src: '~/assets/css/common.css'
+    }
+  ],
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [
+    {
+      src: '~/plugins/axios'
+    },
+    {
+      src: '~/plugins/api'
+    },
+    {
+      src: '~/plugins/log'
+    },
+    {
+      src: '~/plugins/error',
+      ssr: false
+    },
+    {
+      src: '~/plugins/location',
+      ssr: false
+    },
+    {
+      src: '~/plugins/share',
+      ssr: false
+    },
+    {
+      src: '~/plugins/localStorage',
+      ssr: false
+    }
+  ],
   /*
    ** Nuxt.js dev-modules
    */
@@ -40,13 +79,31 @@ module.exports = {
    */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/proxy',
+    '@nuxtjs/dotenv',
+    '@nuxtjs/component-cache',
+    process.env.isDev ? '' : '@nuxtjs/sentry'
   ],
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
-  axios: {},
+  axios: {
+    proxy: true,
+    prefix: '/api'
+  },
+
+  proxy: {
+    '/api/': {
+      target: process.env.API ? process.env.API : 'https://api.chaotag.com',
+      changeOrigin: true,
+      pathRewrite: {
+        '^/api/': ''
+      }
+    }
+  },
+
   /*
    ** Build configuration
    */
@@ -54,6 +111,23 @@ module.exports = {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend(config, { isClient, isServer }) {
+      if (isClient) {
+        config.devtool = 'eval-source-map'
+      } else {
+        config.devtool = 'source-map'
+      }
+    },
+    // extractCSS: process.env.NODE_ENV !== 'development',
+    postcss: {
+      // Add plugin names as key and arguments as value
+      // Install them before as dependencies with npm or yarn
+      plugins: {
+        // Disable a plugin by passing false as value
+        autoprefixer: {
+          remove: false
+        }
+      }
+    }
   }
 }

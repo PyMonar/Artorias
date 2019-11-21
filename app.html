@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html {{ HTML_ATTRS }}>
+  <head>
+    {{ HEAD }}
+    <script>
+      let uaInfo = navigator.userAgent
+      let agents = ['Android', 'iPhone',
+        'SymbianOS', 'Windows Phone',
+        'iPod']
+      let flag = true
+      for (let v = 0; v < agents.length; v++) {
+        if (uaInfo.indexOf(agents[v]) > 0) {
+          flag = false
+          break
+        }
+      }
+      if (!flag) {
+        window.isResponsive = true
+      } else {
+        window.isResponsive = false
+      }
+    </script>
+    <script>
+      function resize () {
+        function r () {
+          let rootSize = document.documentElement.clientWidth / 375 * 100
+          document.documentElement.style.fontSize = rootSize + 'px'
+        }
+        r()
+        window.addEventListener('orientationchange' in window ? 'orientationchange' : 'resize', r, false)
+      }
+      if (window.isResponsive) {
+        resize()
+      } else {
+        document.documentElement.style.fontSize = '160px'
+      }
+    </script>
+  </head>
+  <body {{ BODY_ATTRS }}>
+    {{ APP }}
+  </body>
+</html>
