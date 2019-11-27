@@ -39,7 +39,12 @@ export const mutations = {
   }
 }
 
-export const actions = {}
+export const actions = {
+  nuxtServerInit({ commit }, { req }) {
+    const ua = req.headers['user-agent']
+    commit('SET_UA', ua)
+  }
+}
 
 export const getters = {
   isAgentPc: (state) => {

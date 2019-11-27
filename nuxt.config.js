@@ -4,12 +4,6 @@ require('dotenv').config()
 module.exports = {
   mode: 'universal',
 
-  // router
-  router: {
-    // 在每页渲染前运行 middleware/user-agent.js 中间件的逻辑
-    middleware: 'user-agent'
-  },
-
   /*
    ** Headers of the page
    */
@@ -34,7 +28,8 @@ module.exports = {
    */
   css: [
     {
-      src: '~/assets/css/common.css'
+      src: '~/assets/css/common.less',
+      lang: 'less'
     }
   ],
   /*
@@ -45,6 +40,9 @@ module.exports = {
       src: '~/plugins/axios'
     },
     {
+      src: '~/plugins/style'
+    },
+    {
       src: '~/plugins/api'
     },
     {
@@ -52,19 +50,19 @@ module.exports = {
     },
     {
       src: '~/plugins/error',
-      ssr: false
+      mode: 'client'
     },
     {
       src: '~/plugins/location',
-      ssr: false
+      mode: 'client'
     },
     {
       src: '~/plugins/share',
-      ssr: false
+      mode: 'client'
     },
     {
       src: '~/plugins/localStorage',
-      ssr: false
+      mode: 'client'
     }
   ],
   /*
