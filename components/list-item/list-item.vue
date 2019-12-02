@@ -6,7 +6,7 @@
         在迪士尼樂園擔任產品設計師是什麼體驗？
       </div>
       <div class="author">
-        <span class="tag">业内故事</span>
+        <span class="special-column">业内故事</span>
         <span class="name">Edison Chen</span>
       </div>
       <div class="desc-container">

@@ -1,7 +1,7 @@
 <template>
   <div id="sidebar-list">
     <div class="sidebar-list-title">
-      <span class="tag">过往内容</span>
+      <span class="special-column">过往内容</span>
     </div>
     <div v-for="(item, index) in list" :key="index" class="sidebar-list-item">
       <div class="title">在迪士尼樂園擔任產品設計師是什麼體驗？</div>
