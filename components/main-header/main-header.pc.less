@@ -42,13 +42,91 @@
   margin-right: 0.2rem;
 }
 
-#avatar {
+#avatar-menu {
   height: 0.4rem;
   width: 0.4rem;
   border-radius: 50%;
 
   background-color: #efefef;
   margin-right: 0.2rem;
+  position: relative;
+
+  #menu {
+    position: absolute;
+    width: 2.28rem;
+    background-color: #ffffff;
+    box-shadow: 0 0.02rem 0.06rem 0.01rem rgba(0, 0, 0, 0.1);
+    top: 0.5rem;
+    left: -0.25rem;
+
+    box-sizing: border-box;
+    padding: 0.24rem;
+  }
+
+  ul#menu-list {
+    margin: 0.22rem 0;
+    border-top: 0.01rem solid #dddddd;
+    border-bottom: 0.01rem solid #dddddd;
+    font-size: 0.16rem;
+    font-weight: 500;
+    color: #333333;
+
+    li {
+      margin: 0.24rem 0;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  #logout {
+    font-size: 0.16rem;
+    font-weight: 500;
+    color: #8750fa;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  #avatar-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #avatar-image {
+    height: 0.6rem;
+    width: 0.6rem;
+    border-radius: 50%;
+    background-color: #cecece;
+  }
+
+  #user-info {
+    flex: 1;
+    margin-left: 0.12rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    #user-info-name {
+      font-size: 0.18rem;
+      font-weight: 600;
+      height: 0.18rem;
+      line-height: 0.18rem;
+      color: #333333;
+    }
+
+    #user-info-id {
+      font-size: 0.12rem;
+      font-weight: 500;
+      height: 0.12rem;
+      line-height: 0.12rem;
+      color: #999999;
+      margin-top: 0.08rem;
+    }
+  }
 }
 
 #state {
