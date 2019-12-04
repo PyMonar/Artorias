@@ -1,0 +1,122 @@
+#user-container {
+  width: 10.5rem;
+  margin: 0 auto;
+}
+
+#user-panel {
+  height: 2.66rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#avatar-panel {
+  height: 2.66rem;
+  width: 3.3rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  #avatar {
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 50%;
+    margin-right: 0.6rem;
+    background-color: #d1d1d1;
+  }
+}
+
+#info-panel {
+  height: 1.2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-left: 0.3rem;
+}
+
+#user-name-line {
+  margin-top: 0.08rem;
+  display: flex;
+  flex-direction: row;
+  height: 0.32rem;
+  line-height: 0.32rem;
+
+  .name {
+    font-size: 0.3rem;
+    font-weight: 600;
+    color: #333333;
+    margin-right: 0.24rem;
+  }
+}
+
+#user-state-line {
+  display: flex;
+  flex-direction: row;
+  font-size: 0.16rem;
+  font-weight: 500;
+  color: #666666;
+  height: 0.16rem;
+  line-height: 0.16rem;
+
+  div {
+    margin-right: 0.2rem;
+  }
+}
+
+#user-headline {
+  font-size: 0.16rem;
+  font-weight: 500;
+  color: #333333;
+  height: 0.16rem;
+  line-height: 0.16rem;
+}
+
+#tab-bar {
+  height: 0.48rem;
+  border-bottom: 0.01rem solid #dddddd;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  color: #333333;
+  font-size: 0.16rem;
+  font-weight: 500;
+
+  li.tab-item {
+    cursor: pointer;
+    box-sizing: border-box;
+    height: 0.48rem;
+    line-height: 0.48rem;
+    margin-right: 1.16rem;
+    opacity: 0.4;
+
+    &:first-child {
+      margin-left: 3.6rem;
+    }
+  }
+
+  li.tab-item.selected {
+    opacity: 1;
+    border-bottom: 0.02rem solid #333333;
+  }
+}
+
+// TODO: 待提取组件
+.chao-button {
+  box-sizing: border-box;
+  width: 0.9rem;
+  height: 0.32rem;
+  border-radius: 0.2rem;
+  border: 0.01rem solid #cccccc;
+  line-height: 0.32rem;
+  text-align: center;
+
+  font-size: 0.16rem;
+  letter-spacing: 0.02rem;
+  color: #333333;
+  font-weight: 600;
+}

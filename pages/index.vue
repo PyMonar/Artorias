@@ -4,7 +4,7 @@
     <div id="content-container">
       <!-- 主列表 -->
       <div id="list-container">
-        <list-item v-for="i in 5" :key="i" class="list-item"></list-item>
+        <list-item v-for="i in 5" :key="i"></list-item>
       </div>
       <!-- 侧边栏 -->
       <side-bar>

@@ -1,0 +1,109 @@
+#user-container {
+  width: 3.75rem;
+}
+
+#user-panel {
+  height: 2.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 0.18rem;
+}
+
+#avatar-panel {
+  margin: 0.2rem 0 0.14rem 0;
+
+  #avatar {
+    height: 0.8rem;
+    width: 0.8rem;
+    border-radius: 50%;
+    background-color: #d1d1d1;
+  }
+}
+
+#info-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#user-name-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .name {
+    font-size: 0.24rem;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 0.12rem;
+  }
+}
+
+#user-state-line {
+  display: flex;
+  flex-direction: row;
+  font-size: 0.14rem;
+  font-weight: 500;
+  color: #666666;
+  height: 0.14rem;
+  line-height: 0.14rem;
+  margin-top: 0.16rem;
+
+  div {
+    margin-right: 0.14rem;
+  }
+}
+
+#user-headline {
+  display: none;
+}
+
+#tab-bar {
+  height: 0.42rem;
+  border-bottom: 0.01rem solid #dddddd;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  color: #333333;
+  font-size: 0.14rem;
+  font-weight: 500;
+
+  li.tab-item {
+    cursor: pointer;
+    box-sizing: border-box;
+    height: 0.42rem;
+    line-height: 0.42rem;
+    margin: 0 0.29rem;
+    opacity: 0.4;
+  }
+
+  li.tab-item.selected {
+    opacity: 1;
+    border-bottom: 0.02rem solid #333333;
+  }
+}
+
+.list-container {
+  margin: 0 0.15rem;
+}
+
+// TODO: 待提取组件
+.chao-button {
+  box-sizing: border-box;
+  width: 0.8rem;
+  height: 0.32rem;
+  border-radius: 0.16rem;
+  border: 0.01rem solid #cccccc;
+  line-height: 0.32rem;
+  text-align: center;
+
+  font-size: 0.14rem;
+  letter-spacing: 0.02rem;
+  color: #333333;
+  font-weight: 600;
+}
