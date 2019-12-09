@@ -19,7 +19,7 @@ export default {
   components: {
     MainHeader
   },
-  created() {
+  created () {
     // 注入样式
     this.$style('main')
   }

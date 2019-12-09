@@ -62,12 +62,12 @@ export default {
     Tag,
     Action
   },
-  head() {
+  head () {
     return {
       title: 'CHAO 各庄 - 这是一个神奇的庄'
     }
   },
-  created() {
+  created () {
     // 注入样式
     this.$style('post')
     console.log(this.$route.params)

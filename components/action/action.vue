@@ -34,11 +34,11 @@ export default {
       default: 'like'
     }
   },
-  created() {
+  created () {
     this.$style('action', true)
   },
   methods: {
-    doClickAction() {
+    doClickAction () {
       console.log(this.type)
     }
   }

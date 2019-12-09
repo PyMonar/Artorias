@@ -47,20 +47,20 @@
 <script>
 export default {
   name: 'MainHeader',
-  data() {
+  data () {
     return {
       menuVisible: false
     }
   },
   computed: {
-    isAgentPc() {
+    isAgentPc () {
       return this.$store.getters.isAgentPc
     }
   },
-  created() {
+  created () {
     this.$style('main-header', true)
   },
-  mounted() {
+  mounted () {
     // 点击非菜单区域关闭菜单
     document.addEventListener('click', (e) => {
       if (!this.$refs.menu.contains(e.target)) {
@@ -69,14 +69,14 @@ export default {
     })
   },
   methods: {
-    showMenu(e) {
+    showMenu (e) {
       const target = e.target
       const avatarMenu = document.getElementById('avatar-menu')
       if (target === avatarMenu) {
         this.menuVisible = !this.menuVisible
       }
     },
-    hideMenu() {
+    hideMenu () {
       this.menuVisible = false
     }
   }

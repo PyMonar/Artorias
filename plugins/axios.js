@@ -1,8 +1,8 @@
 // 插件在运行 Vue 应用程序之前执行
 // 设置 axios 插件的目的是自定义拦截器与全局设置
-export default function({ $axios, redirect, store, query }) {
+export default function ({ $axios, redirect, store, query }) {
   // 设置 auth
-  function saveAuth(response) {
+  function saveAuth (response) {
     if (response.headers) {
       const auth =
         response.headers['x-new-register-authorization'] ||
@@ -18,7 +18,7 @@ export default function({ $axios, redirect, store, query }) {
   }
 
   // 设置 headers
-  function getHeaders() {
+  function getHeaders () {
     let auth = query.token || ''
     if (store.state.auth) {
       auth = store.state.auth

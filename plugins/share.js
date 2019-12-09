@@ -3,9 +3,9 @@ import wx from 'weixin-js-sdk'
 import constant from '~/assets/utils/constant'
 
 // 获取 base64 编码
-function b64EncodeUnicode(str) {
+function b64EncodeUnicode (str) {
   return window.btoa(
-    encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, function toSolidBytes(
+    encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, function toSolidBytes (
       match,
       p1
     ) {
@@ -53,11 +53,11 @@ export default ({ app }, inject) => {
             link: ShareObject.link, // 分享链接，该链接域名必须与当前企业的可信域名一致
             imgUrl: ShareObject.imgUrl, // 分享图标
             desc: ShareObject.desc, // 分享描述
-            success() {
+            success () {
               // 用户确认分享后执行的回调函数
               log('success', '分享成功')
             },
-            cancel() {
+            cancel () {
               // 用户取消分享后执行的回调函数
             }
           })
@@ -68,11 +68,11 @@ export default ({ app }, inject) => {
             desc: ShareObject.desc, // 分享描述
             link: ShareObject.link, // 分享链接，该链接域名必须与当前企业的可信域名一致
             imgUrl: ShareObject.imgUrl, // 分享图标
-            success() {
+            success () {
               // 用户确认分享后执行的回调函数
               log('success', '分享成功')
             },
-            cancel() {
+            cancel () {
               // 用户取消分享后执行的回调函数
             }
           })
@@ -83,11 +83,11 @@ export default ({ app }, inject) => {
             desc: ShareObject.desc, // 分享描述
             link: ShareObject.link, // 分享链接，该链接域名必须与当前企业的可信域名一致
             imgUrl: ShareObject.imgUrl, // 分享图标
-            success() {
+            success () {
               // 用户确认分享后执行的回调函数
               log('success', '分享成功')
             },
-            cancel() {
+            cancel () {
               // 用户取消分享后执行的回调函数
             }
           })
@@ -98,11 +98,11 @@ export default ({ app }, inject) => {
             desc: ShareObject.desc, // 分享描述
             link: ShareObject.link, // 分享链接，该链接域名必须与当前企业的可信域名一致
             imgUrl: ShareObject.imgUrl, // 分享图标
-            success() {
+            success () {
               // 用户确认分享后执行的回调函数
               log('success', '分享成功')
             },
-            cancel() {
+            cancel () {
               // 用户取消分享后执行的回调函数
             }
           })
@@ -113,11 +113,11 @@ export default ({ app }, inject) => {
             desc: ShareObject.desc, // 分享描述
             link: ShareObject.link, // 分享链接，该链接域名必须与当前企业的可信域名一致
             imgUrl: ShareObject.imgUrl, // 分享图标
-            success() {
+            success () {
               // 用户确认分享后执行的回调函数
               log('success', '分享成功')
             },
-            cancel() {
+            cancel () {
               // 用户取消分享后执行的回调函数
             }
           })

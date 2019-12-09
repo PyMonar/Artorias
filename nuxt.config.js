@@ -109,7 +109,7 @@ module.exports = {
     /*
      ** You can extend webpack config here
      */
-    extend(config, { isClient, isServer }) {
+    extend (config, { isClient, isServer }) {
       if (isClient) {
         config.devtool = 'eval-source-map'
       } else {

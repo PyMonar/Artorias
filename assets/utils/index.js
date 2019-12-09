@@ -1,7 +1,7 @@
 // 工具类
 
 // 时间格式化
-export function timestampFormat(dateTimeStamp) {
+export function timestampFormat (dateTimeStamp) {
   dateTimeStamp *= 1000
   const minute = 1000 * 60 // 把分，时，天，周，半个月，一个月用毫秒表示
   const hour = minute * 60
@@ -61,7 +61,7 @@ export function timestampFormat(dateTimeStamp) {
 }
 
 // 获取查询字符串
-export function getQueryString(query) {
+export function getQueryString (query) {
   let queryString = ''
   const loc = window.location.href
   if (loc.includes(`${query}=`)) {
@@ -71,13 +71,13 @@ export function getQueryString(query) {
 }
 
 // 判断是否是微信
-export function isWeixin(ua) {
+export function isWeixin (ua) {
   ua = ua || navigator.userAgent
   return /micromessenger/.test(ua.toLowerCase())
 }
 
 // 判断是否是 PC
-export function isPC(ua) {
+export function isPC (ua) {
   ua = ua || navigator.userAgent
   const agents = [
     'Android',
@@ -98,12 +98,12 @@ export function isPC(ua) {
 }
 
 // 判断是否支持某 CSS3 属性
-export function supportCss3(style) {
+export function supportCss3 (style) {
   const prefix = ['webkit', 'Moz', 'ms', 'o']
   const humpString = []
   const htmlStyle = document.documentElement.style
-  const _toHumb = function(string) {
-    return string.replace(/-(\w)/g, function($0, $1) {
+  const _toHumb = function (string) {
+    return string.replace(/-(\w)/g, function ($0, $1) {
       return $1.toUpperCase()
     })
   }
@@ -120,7 +120,7 @@ export function supportCss3(style) {
 }
 
 // 判断电话是否合法
-export function isPhoneLegal(input) {
+export function isPhoneLegal (input) {
   const myReg = /^[1][3,4,5,6,7,8,9][0-9]{9}$/
   if (!myReg.test(input)) {
     return false
@@ -130,7 +130,7 @@ export function isPhoneLegal(input) {
 }
 
 // 日期
-export function normalizeDate(dateStr) {
+export function normalizeDate (dateStr) {
   const date = new Date(dateStr)
   return `${date.getFullYear() - 0}-${date.getMonth() -
     0 +
@@ -138,7 +138,7 @@ export function normalizeDate(dateStr) {
 }
 
 // 性别
-export function genderShow(gender) {
+export function genderShow (gender) {
   switch (gender) {
     case 0:
       return '未设置'
@@ -154,6 +154,6 @@ export function genderShow(gender) {
 }
 
 // Token 展示
-export function tokenShow(token = '000000000') {
+export function tokenShow (token = '000000000') {
   return token.slice(0, 3) + '·' + token.slice(3, 6) + '·' + token.slice(6)
 }

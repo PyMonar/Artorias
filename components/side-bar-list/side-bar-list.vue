@@ -46,7 +46,7 @@
 // 侧边栏列表组件
 export default {
   name: 'SideBarList',
-  data() {
+  data () {
     return {
       list: [1, 2, 3, 4, 5]
     }

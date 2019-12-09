@@ -21,7 +21,7 @@ export default {
       default: 404
     }
   },
-  mounted() {
+  mounted () {
     this.$log('error', this.error)
   }
 }

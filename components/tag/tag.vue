@@ -9,7 +9,7 @@ export default {
   props: {
     tag: {
       type: Object,
-      default() {
+      default () {
         return {
           id: '1',
           name: '标签1'
@@ -17,11 +17,11 @@ export default {
       }
     }
   },
-  created() {
+  created () {
     this.$style('tag', true)
   },
   methods: {
-    doClickTag() {
+    doClickTag () {
       console.log(this.tag.id)
     }
   }

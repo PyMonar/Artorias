@@ -40,7 +40,7 @@ export default {
   components: {
     ListItem
   },
-  created() {
+  created () {
     this.$style('user')
   }
 }

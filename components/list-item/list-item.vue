@@ -28,12 +28,12 @@ export default {
   props: {
     item: {
       type: Object,
-      default() {
+      default () {
         return {}
       }
     }
   },
-  created() {
+  created () {
     this.$style('list-item', true)
   }
 }

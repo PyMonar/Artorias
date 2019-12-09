@@ -15,32 +15,32 @@ export const state = () => ({
 })
 
 export const mutations = {
-  SET_CUR_PATH(state, path) {
+  SET_CUR_PATH (state, path) {
     state.curPath = path
   },
-  SET_GUEST_AUTH(state, auth) {
+  SET_GUEST_AUTH (state, auth) {
     state.guestAuth = auth
   },
-  SET_AUTH(state, auth) {
+  SET_AUTH (state, auth) {
     state.auth = auth
   },
-  SET_UA(state, ua) {
+  SET_UA (state, ua) {
     state.ua = ua
   },
-  SET_OPEN_APP_URL(state, url) {
+  SET_OPEN_APP_URL (state, url) {
     state.openIOSUrl = `${constant.OPEN_IOS_URL}?fakepath=${url}`
     state.openAndroidUrl = `${constant.OPEN_ANDROID_URL}${url}`
   },
-  SET_COVER_SHOW(state, flag) {
+  SET_COVER_SHOW (state, flag) {
     state.coverShow = flag
   },
-  SET_PROTECT_COVER_SHOW(state, flag) {
+  SET_PROTECT_COVER_SHOW (state, flag) {
     state.protectCoverShow = flag
   }
 }
 
 export const actions = {
-  nuxtServerInit({ commit }, { req }) {
+  nuxtServerInit ({ commit }, { req }) {
     const ua = req.headers['user-agent']
     commit('SET_UA', ua)
   }

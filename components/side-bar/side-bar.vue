@@ -9,11 +9,11 @@
 export default {
   name: 'SideBar',
   computed: {
-    isAgentPc() {
+    isAgentPc () {
       return this.$store.getters.isAgentPc
     }
   },
-  created() {
+  created () {
     this.$style('side-bar', true)
   }
 }
