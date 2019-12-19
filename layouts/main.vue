@@ -7,7 +7,7 @@
       <nuxt />
     </div>
     <!-- footer -->
-    <footer id="footer-container">CHAO@2020</footer>
+    <footer id="footer-container">Artorias by Monar@2020</footer>
   </div>
 </template>
 

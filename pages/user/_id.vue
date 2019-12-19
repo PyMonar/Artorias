@@ -8,7 +8,7 @@
       <div id="info-panel">
         <div id="user-name-line">
           <div class="name">Edison</div>
-          <div class="chao-button">编辑</div>
+          <div class="common-button">编辑</div>
         </div>
         <div id="user-state-line">
           <div>14 帖子</div>

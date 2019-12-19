@@ -29,7 +29,7 @@ export default {
   },
   head () {
     return {
-      title: 'CHAO 各庄 - 这是一个神奇的庄'
+      title: 'Artorias'
     }
   },
   created () {

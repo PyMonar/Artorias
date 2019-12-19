@@ -25,7 +25,7 @@ export default ({ app }, inject) => {
       desc: constant.SLOGAN
     }
     request
-      .get(
+      .get( // 后端 wx 相关配置接口
         `/config/wx_jsapi?url=${b64EncodeUnicode(
           window.location.href.split('#')[0]
         )}`

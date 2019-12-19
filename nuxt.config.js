@@ -8,7 +8,7 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: 'CHAO 各庄',
+    title: 'Artorias',
     meta: [
       { charset: 'utf-8' },
       {
@@ -94,7 +94,7 @@ module.exports = {
 
   proxy: {
     '/api/': {
-      target: process.env.API ? process.env.API : 'https://api.chaotag.com',
+      target: process.env.API ? process.env.API : 'https://yourhost.com',
       changeOrigin: true,
       pathRewrite: {
         '^/api/': ''

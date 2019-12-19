@@ -5,7 +5,7 @@
       <!-- title -->
       <div class="post-title">Apple 为环绕式 iPhone 屏幕申请最新专利</div>
       <!-- column -->
-      <span class="special-column post-column">CHAO 科技</span>
+      <span class="special-column post-column">科技</span>
       <!-- article -->
       <div class="post-content">
         <p>
@@ -64,7 +64,7 @@ export default {
   },
   head () {
     return {
-      title: 'CHAO 各庄 - 这是一个神奇的庄'
+      title: 'Artorias'
     }
   },
   created () {

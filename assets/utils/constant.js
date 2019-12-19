@@ -13,7 +13,7 @@ export default {
   // 打开 APP 链接（Anroid）
   OPEN_ANDROID_URL: '',
   // SLOGAN
-  SLOGAN: 'CHAO 各庄',
+  SLOGAN: 'Artorias',
   // ICON
   ICON: ''
 }
