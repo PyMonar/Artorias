@@ -32,8 +32,7 @@ export default function ({ $axios, redirect, store, query }) {
     const headers = {
       'x-register-authorization': auth,
       'x-guest-authorization': guestAuth,
-      'content-type': 'application/json;charset=UTF-8',
-      'x-chao-platform': 'web'
+      'content-type': 'application/json;charset=UTF-8'
     }
     return headers
   }
